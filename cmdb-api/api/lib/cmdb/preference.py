@@ -105,7 +105,8 @@ class PreferenceManager(object):
         ci_type_order = sorted(PreferenceCITypeOrder.get_by(uid=current_user.uid, to_dict=False), key=lambda x: x.order)
         if instance:
             types = db.session.query(PreferenceShowAttributes.type_id,
-                                     PreferenceShowAttributes.uid, PreferenceShowAttributes.created_at).filter(
+                                     PreferenceShowAttributes.uid, 
+                                     db.func.max(PreferenceShowAttributes.created_at).label('created_at')).filter(
                 PreferenceShowAttributes.deleted.is_(False)).filter(
                 PreferenceShowAttributes.uid == current_user.uid).group_by(
                 PreferenceShowAttributes.uid, PreferenceShowAttributes.type_id)

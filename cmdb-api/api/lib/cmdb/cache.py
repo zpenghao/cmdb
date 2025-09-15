@@ -559,7 +559,8 @@ class CMDBCounterCache(object):
         result = dict(type_id2users=defaultdict(list))
 
         types = db.session.query(PreferenceShowAttributes.type_id,
-                                 PreferenceShowAttributes.uid, PreferenceShowAttributes.created_at).filter(
+                                 PreferenceShowAttributes.uid, 
+                                 db.func.max(PreferenceShowAttributes.created_at).label('created_at')).filter(
             PreferenceShowAttributes.deleted.is_(False)).group_by(
             PreferenceShowAttributes.uid, PreferenceShowAttributes.type_id)
         for i in types:

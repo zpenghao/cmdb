@@ -128,7 +128,16 @@ def register_extensions(app):
     babel.init_app(app, locale_selector=get_locale)
     cache.init_app(app)
     db.init_app(app)
-    cors.init_app(app)
+    
+    # Configure CORS
+    cors_config = {
+        'origins': app.config.get('CORS_ORIGINS', ['http://localhost:8000', 'http://127.0.0.1:8000']),
+        'supports_credentials': app.config.get('CORS_SUPPORTS_CREDENTIALS', True),
+        'allow_headers': app.config.get('CORS_ALLOW_HEADERS', ['Content-Type', 'Authorization']),
+        'methods': app.config.get('CORS_METHODS', ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'])
+    }
+    cors.init_app(app, **cors_config)
+    
     login_manager.init_app(app)
     migrate.init_app(app, db, directory=f"{BASE_DIR}/migrations")
     rd.init_app(app)

@@ -68,12 +68,12 @@ const genCmdbRoutes = async () => {
         meta: { title: 'cmdb.menu.ciSearch', icon: 'ops-cmdb-search', selectedIcon: 'ops-cmdb-search', keepAlive: false },
         component: () => import('../views/resource_search_2/index.vue')
       },
-      {
-        path: '/cmdb/adc',
-        name: 'cmdb_auto_discovery_ci',
-        meta: { title: 'cmdb.menu.adCIs', icon: 'ops-cmdb-adc', selectedIcon: 'ops-cmdb-adc', keepAlive: false, permission: ['admin', 'cmdb_admin'] },
-        component: () => import('../views/discoveryCI/index.vue')
-      },
+      // {
+      //   path: '/cmdb/adc',
+      //   name: 'cmdb_auto_discovery_ci',
+      //   meta: { title: 'cmdb.menu.adCIs', icon: 'ops-cmdb-adc', selectedIcon: 'ops-cmdb-adc', keepAlive: false, permission: ['admin', 'cmdb_admin'] },
+      //   component: () => import('../views/discoveryCI/index.vue')
+      // },
       {
         path: `/cmdb/cidetail/:typeId/:ciId`,
         name: 'cmdb_ci_detail',
@@ -81,23 +81,23 @@ const genCmdbRoutes = async () => {
         meta: { title: 'cmdb.menu.cidetail', keepAlive: false },
         component: () => import('../views/ci/ciDetailPage.vue')
       },
-      {
-        path: '/cmdb/disabled4',
-        name: 'cmdb_disabled4',
-        meta: { title: 'cmdb.menu.scene', appName: 'cmdb', disabled: true, permission: ['admin', 'cmdb_admin'] },
-      },
-      {
-        path: '/cmdb/ipam',
-        component: () => import('../views/ipam'),
-        name: 'cmdb_ipam',
-        meta: { title: 'IPAM', appName: 'cmdb', icon: 'veops-ipam', selectedIcon: 'veops-ipam', keepAlive: false, permission: ['admin', 'cmdb_admin'] }
-      },
-      {
-        path: '/cmdb/dcim',
-        component: () => import('../views/dcim'),
-        name: 'cmdb_dcim',
-        meta: { title: 'cmdb.menu.dcim', appName: 'cmdb', icon: 'veops-data_center', selectedIcon: 'veops-data_center', keepAlive: false, permission: ['cmdb_admin', 'admin'] }
-      },
+      // {
+      //   path: '/cmdb/disabled4',
+      //   name: 'cmdb_disabled4',
+      //   meta: { title: 'cmdb.menu.scene', appName: 'cmdb', disabled: true, permission: ['admin', 'cmdb_admin'] },
+      // },
+      // {
+      //   path: '/cmdb/ipam',
+      //   component: () => import('../views/ipam'),
+      //   name: 'cmdb_ipam',
+      //   meta: { title: 'IPAM', appName: 'cmdb', icon: 'veops-ipam', selectedIcon: 'veops-ipam', keepAlive: false, permission: ['admin', 'cmdb_admin'] }
+      // },
+      // {
+      //   path: '/cmdb/dcim',
+      //   component: () => import('../views/dcim'),
+      //   name: 'cmdb_dcim',
+      //   meta: { title: 'cmdb.menu.dcim', appName: 'cmdb', icon: 'veops-data_center', selectedIcon: 'veops-data_center', keepAlive: false, permission: ['cmdb_admin', 'admin'] }
+      // },
       {
         path: '/cmdb/disabled2',
         name: 'cmdb_disabled2',

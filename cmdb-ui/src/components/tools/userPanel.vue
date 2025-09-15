@@ -45,42 +45,42 @@
       </div>
     </div>
 
-    <div class="user-panel-row">
-      <div class="user-panel-row-label">
-        {{ $t('userPanel.switchLanguage') }}
-      </div>
+<!--    <div class="user-panel-row">-->
+<!--      <div class="user-panel-row-label">-->
+<!--        {{ $t('userPanel.switchLanguage') }}-->
+<!--      </div>-->
 
-      <div class="user-panel-lang">
-        <div
-          v-for="(lang, index) in languageList"
-          :key="index"
-          :class="['user-panel-lang-item', lang.key === locale ? 'user-panel-lang-item_active' : '']"
-          @click="changeLang(lang.key)"
-        >
-          {{ lang.title }}
-        </div>
-      </div>
-    </div>
+<!--      <div class="user-panel-lang">-->
+<!--        <div-->
+<!--          v-for="(lang, index) in languageList"-->
+<!--          :key="index"-->
+<!--          :class="['user-panel-lang-item', lang.key === locale ? 'user-panel-lang-item_active' : '']"-->
+<!--          @click="changeLang(lang.key)"-->
+<!--        >-->
+<!--          {{ lang.title }}-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
 
-    <div class="user-panel-row">
-      <div class="user-panel-row-label">
-        {{ $t('userPanel.bindAccount') }}
-      </div>
+<!--    <div class="user-panel-row">-->
+<!--      <div class="user-panel-row-label">-->
+<!--        {{ $t('userPanel.bindAccount') }}-->
+<!--      </div>-->
 
-      <div class="user-panel-bind">
-        <a-tooltip
-          v-for="(item) in bindList"
-          :key="item.type"
-          :title="$t(item.title)"
-        >
-          <ops-icon
-            class="user-panel-bind-item"
-            :type="userInfo.notice_info && userInfo.notice_info[item.type] ? item.existedIcon : item.icon"
-            @click="handleBindInfo(item.type)"
-          />
-        </a-tooltip>
-      </div>
-    </div>
+<!--      <div class="user-panel-bind">-->
+<!--        <a-tooltip-->
+<!--          v-for="(item) in bindList"-->
+<!--          :key="item.type"-->
+<!--          :title="$t(item.title)"-->
+<!--        >-->
+<!--          <ops-icon-->
+<!--            class="user-panel-bind-item"-->
+<!--            :type="userInfo.notice_info && userInfo.notice_info[item.type] ? item.existedIcon : item.icon"-->
+<!--            @click="handleBindInfo(item.type)"-->
+<!--          />-->
+<!--        </a-tooltip>-->
+<!--      </div>-->
+<!--    </div>-->
 
     <div class="user-panel-account">
       <div

@@ -7,7 +7,8 @@ from datetime import datetime
 
 from flask import current_app
 from flask import session
-from flask_sqlalchemy import BaseQuery
+from flask_sqlalchemy import SQLAlchemy
+from flask_sqlalchemy.query import Query as BaseQuery
 
 from api.extensions import db
 from api.lib.database import CRUDModel

@@ -4,7 +4,10 @@
       <span>{{ $t('cs.login.loginText') }}</span>
     </div>
     <div class="ops-login-right">
-      <img src="../../assets/logo_VECMDB.png" />
+      <div style="text-align: center;display: flex;align-items: center;justify-content: center;">
+        <img src="../../assets/logo-new.png" style="width: 50px;" />
+        <span style="display: inline-block;margin-left: 20px;font-size: 20px;">一站式智能运维平台</span>
+      </div>
       <a-form
         id="formLogin"
         ref="formLogin"
@@ -210,12 +213,15 @@ export default {
   display: flex;
   min-width: 1000px;
   overflow-x: auto;
+  background: url('../../assets/login_bg.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
   .ops-login-left {
     position: relative;
     width: 50%;
-    background: url('../../assets/login_bg.png') no-repeat;
-    background-position: center;
-    background-size: cover;
+    //background: url('../../assets/login_bg.jpg') no-repeat;
+    //background-position: center;
+    //background-size: cover;
     > img {
       width: 80%;
       position: absolute;
@@ -236,6 +242,7 @@ export default {
     width: 50%;
     position: relative;
     padding: 10%;
+    background-color: #ffffff;
     > img {
       width: 70%;
       margin-left: 15%;

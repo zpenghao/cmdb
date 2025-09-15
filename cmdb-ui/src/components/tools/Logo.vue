@@ -1,16 +1,17 @@
 <template>
   <div class="logo">
-    <img
-      @click="jumpTo"
-      v-if="showTitle && !collapsed"
-      style="width: 100%; height: 100%; cursor: pointer"
-      :src="require('@/assets/logo_VECMDB.png')"
-    />
+    <div v-if="showTitle && !collapsed" @click="jumpTo" style="cursor: pointer;display: flex;align-items: center;justify-content: center;">
+      <img
+        style="width: 30px; height: 100%;"
+        :src="require('@/assets/logo-new.png')"
+      />
+      <span>一站式智能运维平台</span>
+    </div>
     <img
       @click="jumpTo"
       v-else
       style="width: 32px; height: 32px; margin-left: 24px; cursor: pointer"
-      :src="require('@/assets/logo.png')"
+      :src="require('@/assets/logo-new.png')"
     />
   </div>
 </template>

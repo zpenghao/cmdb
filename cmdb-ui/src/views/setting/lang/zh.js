@@ -444,7 +444,7 @@ const cs_zh = {
     selectApp: '选择应用',
   },
   login: {
-    loginText: '维易科技 让运维变简单',
+    loginText: '数字化驱动  卓越效能提升',
     username: '用户名/邮箱',
     usernameRequired: '请输入用户名或邮箱',
     password: '密码',
